@@ -1,4 +1,4 @@
-"""dynu_renew module."""
+"""dynu_renew.__init__ file."""
 
 from typing import Final
 
@@ -33,5 +33,8 @@ def renew_domains_ip():
             'myip': myip
         }, auth=(DYNU_USERNAME, DYNU_PASSWORD), timeout=DEFAULT_TIMEOUT)
 
-        if (response.status_code != 200) or (response.text.strip() not in ('good', 'nochg')):
+        if (
+                (response.status_code != 200) or
+                (not response.text.strip().startswith('good')) and (not response.text.strip().startswith('nochg'))
+        ):
             raise Exception(f'Error received from Dynu: {response.text}')  # pylint: disable=broad-exception-raised

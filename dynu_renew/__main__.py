@@ -1,4 +1,4 @@
-"""main file."""
+"""dynu_renew.__main__ file."""
 
 from os import mkdir
 from os.path import isdir, join

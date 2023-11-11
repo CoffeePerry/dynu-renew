@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "dynu-renew"
-version = "1.0.1"
-description = "A Python script to renew public IP address associated with a Dynu domain."
+version = "1.0.2"
+description = "A Python module to renew public IP address associated with a Dynu domain."
 authors = ["Simone Perini <39993316+CoffeePerry@users.noreply.github.com>"]
 readme = "README.md"
 
