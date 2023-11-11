@@ -50,5 +50,5 @@ crontab -e
 Then inserting a new line like this:
 
 ```
-*/5 * * * * ~/main.sh >> ~/main.log 2>&1
+*/5 * * * * python -m dynu_renew >> ~/dynu_renew.log 2>&1
 ```
